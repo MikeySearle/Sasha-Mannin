@@ -479,6 +479,16 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
   .strip{ grid-template-columns:1fr; gap:30px; }
   .nav{ gap:14px; font-size:11px; }
   .hero__aside{ display:none; }
+
+  /* Thumbs are blunter than cursors: everything tappable clears 44px. */
+  .wordmark{ display:inline-block; padding-block:9px; }
+  .nav a{ padding-block:13px; }
+  .swatch{ padding-block:12px; }
+  .foot__links{ gap:8px 22px; }
+  .foot__links a{ display:inline-block; padding-block:12px; }
+  .btn{ padding-block:17px; }
+  .choice span{ padding-block:12px; }
+  .aside a{ display:inline-block; padding-block:14px; }
 }
 
 @media (prefers-reduced-motion:reduce){
