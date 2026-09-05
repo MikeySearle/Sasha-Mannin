@@ -20,7 +20,7 @@
                from formspree.io or web3forms.com and paste it here.
                Nothing else needs to change.
   ------------------------------------------------------------------ */
-  var TO       = '';
+  var TO       = 'hello@example.com';   /* PLACEHOLDER — swap for Sasha's real address */
   var ENDPOINT = '';
 
   var form     = document.getElementById('enquiry-form');
