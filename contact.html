@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enquire — Sasha Mannin</title>
+<meta name="description" content="Buy a piece, commission work, stock the studio or collaborate with Sasha Mannin.">
+<meta name="theme-color" content="#EAE0D5">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0908'/%3E%3Cpath d='M11 9h10v6a5 5 0 0 1-5 5 5 5 0 0 1-5-5z' fill='%23C6AC8F'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#enquiry">Skip to the form</a>
+
+<header class="mast is-solid">
+  <a class="wordmark" href="index.html">Sasha Mannin</a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#studio">Studio</a>
+    <a href="contact.html" aria-current="page">Enquire</a>
+  </nav>
+</header>
+
+<main class="bay page-top">
+
+  <p class="label">Buying, commissions &amp; collaboration</p>
+  <h1 class="display display--l" style="max-width:16ch">Tell her what you have in mind.</h1>
+  <p class="lede" style="margin-top:22px">
+    Whether it is a single cup, a full table service, stocking the work in a shop
+    or making something together — this reaches her directly.
+  </p>
+
+  <div id="enquiry">
+    <form class="form" id="enquiry-form" novalidate>
+
+      <p class="form__error" id="form-error" role="alert" hidden></p>
+
+      <fieldset class="form__set">
+        <legend class="form__legend">You</legend>
+        <div class="form__grid">
+          <p class="field">
+            <label class="field__label" for="f-name">Your name <span class="field__req">Required</span></label>
+            <input class="field__input" id="f-name" name="name" type="text" autocomplete="name" required>
+          </p>
+          <p class="field">
+            <label class="field__label" for="f-email">Email <span class="field__req">Required</span></label>
+            <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" required>
+          </p>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__set">
+        <legend class="form__legend">What for</legend>
+
+        <p class="field">
+          <span class="field__label" id="why-label">This is about <span class="field__req">Required</span></span>
+          <span class="choices" role="radiogroup" aria-labelledby="why-label">
+            <label class="choice"><input type="radio" name="purpose" value="Buying a piece" required><span>Buying a piece</span></label>
+            <label class="choice"><input type="radio" name="purpose" value="A commission"><span>A commission</span></label>
+            <label class="choice"><input type="radio" name="purpose" value="Wholesale or stocking"><span>Wholesale / stocking</span></label>
+            <label class="choice"><input type="radio" name="purpose" value="A collaboration"><span>A collaboration</span></label>
+            <label class="choice"><input type="radio" name="purpose" value="Classes or workshops"><span>Classes</span></label>
+            <label class="choice"><input type="radio" name="purpose" value="Something else"><span>Something else</span></label>
+          </span>
+        </p>
+
+        <p class="field">
+          <label class="field__label" for="f-piece">Which piece, if you know</label>
+          <input class="field__input" id="f-piece" name="piece" type="text" placeholder="Tall vessel, serving bowl…">
+        </p>
+
+        <p class="field">
+          <label class="field__label" for="f-message">Your message <span class="field__req">Required</span></label>
+          <textarea class="field__input field__input--area" id="f-message" name="message" rows="6" required></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset class="form__set">
+        <legend class="form__legend">One last thing</legend>
+        <p class="field" style="max-width:320px">
+          <label class="field__label" for="f-human"><span id="human-question">Loading…</span> <span class="field__req">Required</span></label>
+          <input class="field__input" id="f-human" name="human" type="text" autocomplete="off" inputmode="numeric">
+        </p>
+        <!-- Left empty by people, filled in by robots. -->
+        <label class="pot" aria-hidden="true">Leave this empty
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
+      </fieldset>
+
+      <button class="btn" type="submit">Send it →</button>
+      <p class="form__note" id="form-note"></p>
+    </form>
+
+    <div class="sent" id="sent" hidden>
+      <p class="display display--m">Thank you — that is on its way.</p>
+      <p id="sent-body">She reads everything herself, so give her a day or two.</p>
+    </div>
+  </div>
+
+  <div class="aside">
+    <p><b>Studio</b><!-- REPLACE: town, and whether visits are possible -->By appointment</p>
+    <p><b>Instagram</b><a href="https://www.instagram.com/thetravelingartlab/" rel="noopener">@thetravelingartlab</a></p>
+    <p><b>Shipping</b>Wrapped by hand, sent tracked</p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <p class="foot__mark">Sasha Mannin</p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#studio">Studio</a>
+      <a href="https://www.instagram.com/thetravelingartlab/" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+  <div class="foot__bottom">
+    <span>© <span id="year">2026</span> Sasha Mannin. All work her own.</span>
+    <span>Site by Michael Searle</span>
+  </div>
+</footer>
+
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

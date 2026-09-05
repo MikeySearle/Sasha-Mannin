@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sasha Mannin — Ceramics</title>
+<meta name="description" content="Hand-thrown stoneware and porcelain by Sasha Mannin. Studio pottery, one-off pieces and commissions.">
+<meta name="theme-color" content="#EAE0D5">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sasha Mannin">
+<meta property="og:title" content="Sasha Mannin — Ceramics">
+<meta property="og:description" content="Hand-thrown stoneware and porcelain. Studio pottery, one-off pieces and commissions.">
+<!-- Add once a share image exists at assets/img/share.jpg (1200x628, absolute URL) -->
+<!-- <meta property="og:image" content="https://REPLACE-DOMAIN/assets/img/share.jpg"> -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0908'/%3E%3Cpath d='M11 9h10v6a5 5 0 0 1-5 5 5 5 0 0 1-5-5z' fill='%23C6AC8F'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#work">Skip to the work</a>
+
+<header class="mast">
+  <a class="wordmark" href="#top">Sasha Mannin</a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#studio">Studio</a>
+    <a href="contact.html">Enquire</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ═══════════════ HERO ═══════════════
+       Her work, edge to edge, before a single word.
+       Drop the file at assets/img/work/hero.jpg — landscape, at
+       least 2000px wide. Until then this shows a tone. -->
+  <section class="hero">
+    <div class="shot" data-file="assets/img/work/hero.jpg">
+      <img src="assets/img/work/hero.jpg" alt="A hand-thrown vessel by Sasha Mannin" width="2400" height="1600">
+    </div>
+    <div class="hero__veil"></div>
+
+    <div class="hero__foot">
+      <div>
+        <p class="label">Hand-thrown stoneware &amp; porcelain</p>
+        <!-- REPLACE: one line, in her words -->
+        <h1 class="display display--xl hero__line">Pots made to be used every day.</h1>
+      </div>
+      <!-- REPLACE: where she works -->
+      <p class="hero__aside">Wheel-thrown and hand-finished in the studio. Every piece one of one.</p>
+    </div>
+    <span class="cue" aria-hidden="true"></span>
+  </section>
+
+  <!-- ═══════════════ INTRO ═══════════════ -->
+  <section class="bay bay--tight">
+    <div class="split">
+      <div class="split__a">
+        <!-- REPLACE: the single sentence the whole site rests on -->
+        <p class="display display--l">Clay, water, a wheel and a long wait by the kiln.</p>
+      </div>
+      <div class="split__b prose">
+        <!-- REPLACE: three or four sentences, hers -->
+        <p>Each piece is thrown by hand, trimmed on the wheel, and glazed in small
+        batches — which is why no two ever match exactly. The variation is the point.</p>
+        <p>Work is made in short runs and sold as it comes out of the kiln. Commissions
+        for tableware, wedding gifts and restaurant service are welcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WORK ═══════════════
+       HOW TO ADD A PIECE
+       ─────────────────
+       Copy one <article class="piece"> block and change five things:
+         the image src and its alt         the photograph
+         data-tone                          which glaze filter it belongs to
+         piece__name / piece__price         what it is, what it costs
+         piece__meta                        materials, size
+         --span                             how many of the 12 columns it fills
+         --push                             how far it sits down the page, in px
+       Keep each row's spans adding to 12 or less or the piece wraps. -->
+  <section id="work" class="bay">
+    <div class="head">
+      <div>
+        <p class="label">Available now</p>
+        <h2 class="display display--l">Selected work</h2>
+      </div>
+
+      <div class="filter" role="group" aria-label="Filter by glaze">
+        <p class="label filter__label">Glaze</p>
+        <button class="swatch" type="button" data-filter="all" aria-pressed="true" style="--tone:#EAE0D5"><i></i>All</button>
+        <button class="swatch" type="button" data-filter="bone"  aria-pressed="false" style="--tone:#EAE0D5"><i></i>Bone</button>
+        <button class="swatch" type="button" data-filter="clay"  aria-pressed="false" style="--tone:#C6AC8F"><i></i>Clay</button>
+        <button class="swatch" type="button" data-filter="earth" aria-pressed="false" style="--tone:#5E503F"><i></i>Earth</button>
+        <button class="swatch" type="button" data-filter="slate" aria-pressed="false" style="--tone:#22333B"><i></i>Slate</button>
+      </div>
+    </div>
+
+    <div class="grid" id="work-grid">
+
+      <article class="piece" data-tone="clay" style="--span:5;--push:0">
+        <div class="piece__frame" data-file="work/01.jpg" style="--tone:#C6AC8F;--ratio:4/5">
+          <img src="assets/img/work/01.jpg" alt="" loading="lazy" decoding="async" width="1200" height="1500">
+        </div>
+        <div class="piece__slate">
+          <h3 class="piece__name">Tall vessel</h3>
+          <span class="piece__price">£180</span>
+        </div>
+        <p class="piece__meta"><span>Stoneware</span><span>Matt clay glaze</span><span>28 × 16 cm</span></p>
+      </article>
+
+      <article class="piece" data-tone="bone" style="--span:4;--push:64">
+        <div class="piece__frame" data-file="work/02.jpg" style="--tone:#EAE0D5;--ratio:4/5">
+          <img src="assets/img/work/02.jpg" alt="" loading="lazy" decoding="async" width="1200" height="1500">
+        </div>
+        <div class="piece__slate">
+          <h3 class="piece__name">Serving bowl</h3>
+          <span class="piece__price">£95</span>
+        </div>
+        <p class="piece__meta"><span>Porcelain</span><span>Bone glaze</span><span>11 × 24 cm</span></p>
+      </article>
+
+      <article class="piece" data-tone="slate" style="--span:3;--push:180">
+        <div class="piece__frame" data-file="work/03.jpg" style="--tone:#22333B;--ratio:3/4">
+          <img src="assets/img/work/03.jpg" alt="" loading="lazy" decoding="async" width="1200" height="1600">
+        </div>
+        <div class="piece__slate">
+          <h3 class="piece__name">Small cup</h3>
+          <span class="piece__price">£38</span>
+        </div>
+        <p class="piece__meta"><span>Stoneware</span><span>Slate glaze</span><span>8 × 8 cm</span></p>
+      </article>
+
+      <article class="piece" data-tone="earth" style="--span:4;--push:0">
+        <div class="piece__frame" data-file="work/04.jpg" style="--tone:#5E503F;--ratio:1/1">
+          <img src="assets/img/work/04.jpg" alt="" loading="lazy" decoding="async" width="1400" height="1400">
+        </div>
+        <div class="piece__slate">
+          <h3 class="piece__name">Wide platter</h3>
+          <span class="piece__price">£140</span>
+        </div>
+        <p class="piece__meta"><span>Stoneware</span><span>Iron glaze</span><span>4 × 34 cm</span></p>
+      </article>
+
+      <article class="piece" data-tone="clay" style="--span:5;--push:52">
+        <div class="piece__frame" data-file="work/05.jpg" style="--tone:#C6AC8F;--ratio:5/4">
+          <img src="assets/img/work/05.jpg" alt="" loading="lazy" decoding="async" width="1500" height="1200">
+        </div>
+        <div class="piece__slate">
+          <h3 class="piece__name">Pair of tumblers</h3>
+          <span class="piece__price">£70</span>
+        </div>
+        <p class="piece__meta"><span>Stoneware</span><span>Clay glaze</span><span>10 × 8 cm each</span></p>
+      </article>
+
+      <article class="piece" data-tone="bone" style="--span:3;--push:0">
+        <div class="piece__frame" data-file="work/06.jpg" style="--tone:#EAE0D5;--ratio:3/4">
+          <img src="assets/img/work/06.jpg" alt="" loading="lazy" decoding="async" width="1200" height="1600">
+        </div>
+        <div class="piece__slate">
+          <h3 class="piece__name">Bud vase</h3>
+          <span class="piece__price">£45</span>
+        </div>
+        <p class="piece__meta"><span>Porcelain</span><span>Bone glaze</span><span>14 × 7 cm</span></p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ HER ═══════════════
+       The profile, on the dark band so it reads as a chapter and
+       not an afterthought. Portrait: assets/img/studio/portrait.jpg -->
+  <section id="studio" class="profile bay">
+    <div class="profile__grid">
+      <div class="profile__shot">
+        <div class="piece__frame" data-file="studio/portrait.jpg">
+          <img src="assets/img/studio/portrait.jpg" alt="Sasha Mannin in her studio" loading="lazy" decoding="async" width="1200" height="1500">
+        </div>
+      </div>
+
+      <div class="profile__body">
+        <p class="label">The potter</p>
+        <h2 class="display display--l">Sasha Mannin</h2>
+
+        <div class="prose">
+          <!-- REPLACE: her story, in her voice. Three or four short
+               paragraphs. Where she learned, why she makes what she
+               makes, what she is working on now. -->
+          <p>Sasha has been throwing for over a decade, working mainly in stoneware
+          and porcelain. Her pots are built for the table — plates that stack, cups
+          that sit right in the hand, bowls heavy enough to stay put.</p>
+          <p>She works in small batches, glazing by hand and firing in a single kiln,
+          which keeps the runs short and the pieces individual.</p>
+          <p>Alongside the studio work she teaches, and takes on commissions for
+          restaurants, weddings and private collections.</p>
+        </div>
+
+        <!-- REPLACE: something she has actually said -->
+        <blockquote class="quote">“A pot isn’t finished until someone is using it.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ THE STUDIO ═══════════════ -->
+  <section class="bay bay--tight">
+    <div class="head">
+      <div>
+        <p class="label">How it is made</p>
+        <h2 class="display display--m">In the studio</h2>
+      </div>
+    </div>
+
+    <div class="strip">
+      <figure>
+        <div class="piece__frame" data-file="studio/01.jpg" style="--tone:#C6AC8F">
+          <img src="assets/img/studio/01.jpg" alt="Centring clay on the wheel" loading="lazy" decoding="async" width="1200" height="1200">
+        </div>
+        <figcaption>Everything starts on the wheel, thrown from a single ball of clay.</figcaption>
+      </figure>
+      <figure>
+        <div class="piece__frame" data-file="studio/02.jpg" style="--tone:#5E503F">
+          <img src="assets/img/studio/02.jpg" alt="Glazing by hand" loading="lazy" decoding="async" width="1200" height="1200">
+        </div>
+        <figcaption>Glazes are mixed and dipped by hand, a few pieces at a time.</figcaption>
+      </figure>
+      <figure>
+        <div class="piece__frame" data-file="studio/03.jpg" style="--tone:#22333B">
+          <img src="assets/img/studio/03.jpg" alt="Opening the kiln" loading="lazy" decoding="async" width="1200" height="1200">
+        </div>
+        <figcaption>Two firings, and a day of waiting before the kiln can be opened.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ENQUIRE ═══════════════ -->
+  <section class="cut bay bay--tight">
+    <div class="cut__inner">
+      <div>
+        <p class="label">Buying &amp; collaborating</p>
+        <p class="display display--m" style="max-width:20ch">Commissions, wholesale and one-off pieces.</p>
+      </div>
+      <a class="btn" href="contact.html">Get in touch →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <p class="foot__mark">Sasha Mannin</p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="#work">Work</a>
+      <a href="#studio">Studio</a>
+      <a href="contact.html">Enquire</a>
+      <!-- REPLACE: confirm the handle -->
+      <a href="https://www.instagram.com/thetravelingartlab/" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+  <div class="foot__bottom">
+    <span>© <span id="year">2026</span> Sasha Mannin. All work her own.</span>
+    <span>Site by Michael Searle</span>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
