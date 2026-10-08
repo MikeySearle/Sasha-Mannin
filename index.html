@@ -42,16 +42,16 @@
        least 2000px wide. Until then this shows a tone. -->
   <section class="hero">
     <div class="shot" data-file="assets/img/work/hero.jpg">
-      <img src="assets/img/work/hero.jpg?v=7" alt="Hands shaping a pot on the wheel" width="2400" height="1600">
+      <img src="assets/img/work/hero.jpg?v=8" alt="Hands shaping a pot on the wheel" width="2400" height="1600">
     </div>
     <div class="hero__veil"></div>
 
     <div class="hero__foot">
       <div>
-        <p class="label">Wood-fired stoneware &middot; Aberdeenshire</p>
-        <h1 class="display display--xl hero__line">Every pot is a record of its own firing.</h1>
+        <p class="label">Wood-fired stoneware</p>
+        <h1 class="display display--xl hero__line">Every pot holds the process.</h1>
       </div>
-      <p class="hero__aside">Wood-fired stoneware. Glazes mixed from ash gathered on the coast near Aberdeen.</p>
+      <p class="hero__aside">Thrown, glazed with ash from around the studio, and fired with wood.</p>
     </div>
     <span class="cue" aria-hidden="true"></span>
   </section>
@@ -65,7 +65,7 @@
       <div class="split__b prose">
         <p>She mixes her own glazes from wood ash gathered where she lives, then fires
         with wood, which lays down more ash again. The last firing ran fifteen hours,
-        stoked in shifts with a firing group near her on the Aberdeenshire coast.</p>
+        stoked in shifts with a firing group near her.</p>
         <p>Ash settles where the flame carries it. Unglazed clay takes its colour from
         the fire. The same glaze comes out differently depending on where a pot stood in
         the kiln. None of it repeats.</p>
@@ -75,101 +75,367 @@
 
   <!-- ═══════════════ WORK ═══════════════
        HOW TO ADD A PIECE
-       ─────────────────
-       Copy one <article class="piece"> block and change five things:
-         the image src and its alt         the photograph
-         data-tone                          which glaze filter it belongs to
-         piece__name / piece__price         what it is, what it costs
-         piece__meta                        materials, size
-         --span                             how many of the 12 columns it fills
-         --push                             how far it sits down the page, in px
-       Keep each row's spans adding to 12 or less or the piece wraps. -->
+       ──────────────────
+       Each <article class="piece"> is one object. Put its photographs in
+       assets/img/work/reel/ and list them inside the <div class="reel">.
+       One image shows as a still; two or more become a reel the visitor
+       can swipe or arrow through. Nothing else needs changing — the
+       counter and the arrows appear on their own.
+       Groups are just <section class="group">. Add or rename freely. -->
   <section id="work" class="bay">
     <div class="head">
       <div>
-        <p class="label">Available now</p>
+        <p class="label">Available</p>
         <h2 class="display display--l">Selected work</h2>
       </div>
+      <p class="head__note">Each piece is one of one. What the firing leaves — ash run, flashing, shifts in colour — is the work, not a flaw in it.</p>
+    </div>
 
-      <div class="filter" role="group" aria-label="Filter by glaze">
-        <p class="label filter__label">Glaze</p>
-        <button class="swatch" type="button" data-filter="all" aria-pressed="true" style="--tone:#EAE0D5"><i></i>All</button>
-        <button class="swatch" type="button" data-filter="bone"  aria-pressed="false" style="--tone:#EAE0D5"><i></i>Bone</button>
-        <button class="swatch" type="button" data-filter="clay"  aria-pressed="false" style="--tone:#C6AC8F"><i></i>Clay</button>
-        <button class="swatch" type="button" data-filter="earth" aria-pressed="false" style="--tone:#5E503F"><i></i>Earth</button>
-        <button class="swatch" type="button" data-filter="slate" aria-pressed="false" style="--tone:#22333B"><i></i>Slate</button>
+    <section class="group" id="mugs-beakers">
+      <h3 class="group__name">Mugs &amp; beakers</h3>
+      <div class="grid">
+
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/ash-mug-1.jpg?v=8" alt="Tapered mug, view 1 of 3" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/ash-mug-2.jpg?v=8" alt="Tapered mug, view 2 of 3" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/ash-mug-3.jpg?v=8" alt="Tapered mug, view 3 of 3" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/3</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Tapered mug</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze over iron</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/grey-mug-1.jpg?v=8" alt="Bellied mug" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Bellied mug</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze, exposed foot</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/dec-mug-red-1.jpg?v=8" alt="Decorated mug" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Brushed mug, red</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · brushwork in iron and red</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/dec-mug-blue-1.jpg?v=8" alt="Decorated mug" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Brushed mug, blue</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · blue and ochre brushwork</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/dec-beaker-1.jpg?v=8" alt="Decorated beaker" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Brushed beaker</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · brushwork over ash glaze</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/beaker-small-1.jpg?v=8" alt="Small beaker" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Small beaker</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze, bare clay base</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/beaker-pale-1.jpg?v=8" alt="Beaker" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Beaker</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · pale ash glaze</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/beaker-pair-1.jpg?v=8" alt="Pair of beakers, view 1 of 2" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/beaker-pair-2.jpg?v=8" alt="Pair of beakers, view 2 of 2" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/2</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Pair of beakers</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze, bare clay base</p>
+        </article>
+
       </div>
-    </div>
+    </section>
 
-    <div class="grid" id="work-grid">
+    <section class="group" id="bowls">
+      <h3 class="group__name">Bowls</h3>
+      <div class="grid">
 
-      <article class="piece" data-tone="clay" style="--span:5;--push:0">
-        <div class="piece__frame" data-file="work/01.jpg" style="--tone:#C6AC8F;--ratio:3/2">
-          <img src="assets/img/work/01.jpg?v=7" alt="A two-tone bowl, ochre above iron brown, on a wooden slab" loading="lazy" decoding="async" width="1200" height="1500">
-        </div>
-        <div class="piece__slate">
-          <h3 class="piece__name">Two-tone bowl</h3>
-          <span class="piece__price">£180</span>
-        </div>
-        <p class="piece__meta"><span>Stoneware</span><span>Ochre and iron glaze</span></p>
-      </article>
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/bowl-twotone-1.jpg?v=8" alt="Two-tone bowl, view 1 of 2" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/bowl-twotone-2.jpg?v=8" alt="Two-tone bowl, view 2 of 2" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/2</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Two-tone bowl</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ochre ash glaze over iron</p>
+        </article>
 
-      <article class="piece" data-tone="slate" style="--span:4;--push:64">
-        <div class="piece__frame" data-file="work/02.jpg" style="--tone:#EAE0D5;--ratio:3/2">
-          <img src="assets/img/work/02.jpg?v=7" alt="A large grey-green mug with a looped handle" loading="lazy" decoding="async" width="1200" height="1500">
-        </div>
-        <div class="piece__slate">
-          <h3 class="piece__name">Large mug</h3>
-          <span class="piece__price">£95</span>
-        </div>
-        <p class="piece__meta"><span>Stoneware</span><span>Ash glaze</span></p>
-      </article>
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/bowl-ochre-1.jpg?v=8" alt="Ochre bowl" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Ochre bowl</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze, pooled centre</p>
+        </article>
 
-      <article class="piece" data-tone="bone" style="--span:3;--push:180">
-        <div class="piece__frame" data-file="work/03.jpg" style="--tone:#22333B;--ratio:4/3">
-          <img src="assets/img/work/03.jpg?v=7" alt="A white mug painted with blue slip decoration" loading="lazy" decoding="async" width="1200" height="1600">
-        </div>
-        <div class="piece__slate">
-          <h3 class="piece__name">Decorated mug</h3>
-          <span class="piece__price">£38</span>
-        </div>
-        <p class="piece__meta"><span>Stoneware</span><span>Blue slip decoration</span></p>
-      </article>
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/bowl-blue-1.jpg?v=8" alt="Decorated bowl, view 1 of 2" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/bowl-blue-2.jpg?v=8" alt="Decorated bowl, view 2 of 2" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/2</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Bowl, blue brushwork</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · blue brushwork</p>
+        </article>
 
-      <article class="piece" data-tone="bone" style="--span:4;--push:0">
-        <div class="piece__frame" data-file="work/04.jpg" style="--tone:#5E503F;--ratio:4/3">
-          <img src="assets/img/work/04.jpg?v=7" alt="A wide speckled plate with two small cups" loading="lazy" decoding="async" width="1400" height="1400">
-        </div>
-        <div class="piece__slate">
-          <h3 class="piece__name">Serving plate</h3>
-          <span class="piece__price">£140</span>
-        </div>
-        <p class="piece__meta"><span>Stoneware</span><span>Speckled white glaze</span></p>
-      </article>
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/bowl-ochre-d-1.jpg?v=8" alt="Decorated bowl, view 1 of 3" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/bowl-ochre-d-2.jpg?v=8" alt="Decorated bowl, view 2 of 3" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/bowl-ochre-d-3.jpg?v=8" alt="Decorated bowl, view 3 of 3" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/3</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Bowl, ochre brushwork</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ochre and blue brushwork</p>
+        </article>
 
-      <article class="piece" data-tone="clay" style="--span:5;--push:52">
-        <div class="piece__frame" data-file="work/05.jpg" style="--tone:#C6AC8F;--ratio:3/2">
-          <img src="assets/img/work/05.jpg?v=7" alt="A bowl glazed ochre inside, seen from above" loading="lazy" decoding="async" width="1500" height="1200">
-        </div>
-        <div class="piece__slate">
-          <h3 class="piece__name">Ochre bowl</h3>
-          <span class="piece__price">£70</span>
-        </div>
-        <p class="piece__meta"><span>Stoneware</span><span>Ochre glaze</span></p>
-      </article>
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/bowl-bird-1.jpg?v=8" alt="Decorated bowl" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Bowl, figured brushwork</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · figured brushwork</p>
+        </article>
 
-      <article class="piece" data-tone="earth" style="--span:3;--push:0">
-        <div class="piece__frame" data-file="work/06.jpg" style="--tone:#EAE0D5;--ratio:4/3">
-          <img src="assets/img/work/06.jpg?v=7" alt="Three small cups in cream, ochre and dark glazes" loading="lazy" decoding="async" width="1200" height="1600">
-        </div>
-        <div class="piece__slate">
-          <h3 class="piece__name">Three small cups</h3>
-          <span class="piece__price">£45</span>
-        </div>
-        <p class="piece__meta"><span>Stoneware</span><span>Mixed glazes</span></p>
-      </article>
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/bowl-small-1.jpg?v=8" alt="Small bowl, view 1 of 2" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/bowl-small-2.jpg?v=8" alt="Small bowl, view 2 of 2" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/2</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Small bowl</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze, rolled rim</p>
+        </article>
 
-    </div>
+      </div>
+    </section>
+
+    <section class="group" id="groups">
+      <h3 class="group__name">Groups</h3>
+      <div class="grid">
+
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/setting-1.jpg?v=8" alt="Place setting, view 1 of 4" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/setting-2.jpg?v=8" alt="Place setting, view 2 of 4" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/setting-3.jpg?v=8" alt="Place setting, view 3 of 4" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/setting-4.jpg?v=8" alt="Place setting, view 4 of 4" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/4</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Place setting</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · plate, beaker and bowl</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/blue-set-1.jpg?v=8" alt="Decorated plate and mugs, view 1 of 2" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/blue-set-2.jpg?v=8" alt="Decorated plate and mugs, view 2 of 2" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/2</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Decorated plate and mugs</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · blue brushwork</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/cup-plate-1.jpg?v=8" alt="Cup and plate, view 1 of 2" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/cup-plate-2.jpg?v=8" alt="Cup and plate, view 2 of 2" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/2</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Cup and plate</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/three-beakers-1.jpg?v=8" alt="Three beakers" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Three beakers</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash glaze, bare clay base</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="group" id="other-ceramics">
+      <h3 class="group__name">Other ceramics</h3>
+      <div class="grid">
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/scallop-1.jpg?v=8" alt="Scalloped dish" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Scalloped dish</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · pale ash glaze</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame">
+            <div class="reel">
+              <img src="assets/img/work/reel/three-cups-1.jpg?v=8" alt="Three small cups" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Three small cups</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · ash, ochre and iron glaze</p>
+        </article>
+
+        <article class="piece">
+          <div class="piece__frame" data-reel>
+            <div class="reel">
+              <img src="assets/img/work/reel/figures-1.jpg?v=8" alt="Figures, view 1 of 2" loading="lazy" decoding="async" width="1200" height="800">
+              <img src="assets/img/work/reel/figures-2.jpg?v=8" alt="Figures, view 2 of 2" loading="lazy" decoding="async" width="1200" height="800">
+            </div>
+            <button class="reel__nav reel__nav--prev" type="button" aria-label="Previous view">&#8592;</button>
+            <button class="reel__nav reel__nav--next" type="button" aria-label="Next view">&#8594;</button>
+            <span class="reel__count" aria-hidden="true">1/2</span>
+          </div>
+          <div class="piece__slate">
+            <h4 class="piece__name">Figures</h4>
+            <a class="piece__price" href="contact.html">Enquire</a>
+          </div>
+          <p class="piece__meta">Wood-fired stoneware · unglazed, flashed in the kiln</p>
+        </article>
+
+      </div>
+    </section>
+
   </section>
 
   <!-- ═══════════════ HER ═══════════════
@@ -179,7 +445,7 @@
     <div class="profile__grid">
       <div class="profile__shot">
         <div class="piece__frame" data-file="studio/portrait.jpg">
-          <img src="assets/img/studio/portrait.jpg?v=7" alt="Sasha Mannin at an exhibition of her work" loading="lazy" decoding="async" width="1200" height="1500">
+          <img src="assets/img/studio/portrait.jpg?v=8" alt="Sasha Mannin at an exhibition of her work" loading="lazy" decoding="async" width="1200" height="1500">
         </div>
       </div>
 
@@ -221,19 +487,19 @@
     <div class="strip">
       <figure>
         <div class="piece__frame" data-file="studio/01.jpg" style="--tone:#C6AC8F">
-          <img src="assets/img/studio/01.jpg?v=7" alt="Sasha Mannin glazing a pot at her studio bench" loading="lazy" decoding="async" width="1200" height="1200">
+          <img src="assets/img/studio/01.jpg?v=8" alt="Sasha Mannin glazing a pot at her studio bench" loading="lazy" decoding="async" width="1200" height="1200">
         </div>
         <figcaption>Glazing. The ash is gathered locally and mixed in the studio.</figcaption>
       </figure>
       <figure>
         <div class="piece__frame" data-file="studio/02.jpg" style="--tone:#5E503F">
-          <img src="assets/img/studio/02.jpg?v=7" alt="Sasha Mannin shaping a pot by hand" loading="lazy" decoding="async" width="1200" height="1200">
+          <img src="assets/img/studio/02.jpg?v=8" alt="Sasha Mannin shaping a pot by hand" loading="lazy" decoding="async" width="1200" height="1200">
         </div>
         <figcaption>Each piece dipped and turned by hand.</figcaption>
       </figure>
       <figure>
         <div class="piece__frame" data-file="studio/03.jpg" style="--tone:#22333B">
-          <img src="assets/img/studio/03.jpg?v=7" alt="A cup, a bowl and a plate grouped on a wooden slab" loading="lazy" decoding="async" width="1200" height="1200">
+          <img src="assets/img/studio/03.jpg?v=8" alt="A cup, a bowl and a plate grouped on a wooden slab" loading="lazy" decoding="async" width="1200" height="1200">
         </div>
         <figcaption>What comes out, once the kiln has cooled.</figcaption>
       </figure>

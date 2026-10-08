@@ -1,7 +1,7 @@
 /* ============================================================
    Sasha Mannin — site behaviour
    1. load-in   2. masthead   3. reveal on scroll
-   4. glaze filter            5. images that have not arrived yet
+   4. reels                   5. images that have not arrived yet
    ============================================================ */
 
 (function () {
@@ -60,25 +60,53 @@
     pieces.forEach(function (el) { el.classList.add('is-in'); });
   }
 
-  /* ---------- 4. glaze filter ------------------------------- */
-  /* Browse the collection by colour, the way the museum does. */
+  /* ---------- 4. reels -------------------------------------- */
+  /* Where one object was photographed more than once, the frames sit
+     in a scroll-snapping row. Touch swipes it; a mouse gets arrows.
+     The scroll position is the single source of truth, so a swipe and
+     an arrow press both end up reporting the same index. */
 
-  var swatches = Array.prototype.slice.call(document.querySelectorAll('.swatch'));
+  Array.prototype.forEach.call(document.querySelectorAll('[data-reel]'), function (frame) {
+    var reel  = frame.querySelector('.reel');
+    var shots = reel.querySelectorAll('img');
+    var prev  = frame.querySelector('.reel__nav--prev');
+    var next  = frame.querySelector('.reel__nav--next');
+    var count = frame.querySelector('.reel__count');
+    if (shots.length < 2) return;
 
-  swatches.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var want = btn.dataset.filter;
+    function index() {
+      return Math.round(reel.scrollLeft / reel.clientWidth);
+    }
 
-      swatches.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b === btn));
-      });
+    function sync() {
+      var i = index();
+      if (count) count.textContent = (i + 1) + '/' + shots.length;
+      if (prev) prev.disabled = i <= 0;
+      if (next) next.disabled = i >= shots.length - 1;
+    }
 
-      pieces.forEach(function (p) {
-        var show = want === 'all' || p.dataset.tone === want;
-        p.classList.toggle('is-out', !show);
-        if (show) p.classList.add('is-in');
-      });
+    function go(step) {
+      reel.scrollTo({ left: (index() + step) * reel.clientWidth, behavior: reduce.matches ? 'auto' : 'smooth' });
+    }
+
+    if (prev) prev.addEventListener('click', function () { go(-1); });
+    if (next) next.addEventListener('click', function () { go(1); });
+
+    var pending;
+    reel.addEventListener('scroll', function () {
+      clearTimeout(pending);
+      pending = setTimeout(sync, 90);
+    }, { passive: true });
+
+    /* arrow keys once the reel has focus */
+    reel.tabIndex = 0;
+    reel.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); go(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
     });
+
+    window.addEventListener('resize', sync);
+    sync();
   });
 
   /* ---------- 5. images that have not arrived yet ------------ */
