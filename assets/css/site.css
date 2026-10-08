@@ -159,11 +159,19 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
 
 .hero__veil{
   position:absolute; inset:0;
-  background:linear-gradient(180deg,
-    rgba(10,9,8,.42) 0%,
-    rgba(10,9,8,0) 26%,
-    rgba(10,9,8,0) 48%,
-    rgba(10,9,8,.62) 100%);
+  /* Two scrims, so the type holds on a bright photograph as well as a dark
+     one: a vertical one for the masthead and the foot, and a horizontal one
+     that keeps a dark ground under the text column whatever is behind it. */
+  background:
+    linear-gradient(100deg,
+      rgba(10,9,8,.62) 0%,
+      rgba(10,9,8,.34) 30%,
+      rgba(10,9,8,0)   62%),
+    linear-gradient(180deg,
+      rgba(10,9,8,.46) 0%,
+      rgba(10,9,8,0)   24%,
+      rgba(10,9,8,0)   42%,
+      rgba(10,9,8,.74) 100%);
 }
 
 .hero__foot{
@@ -328,7 +336,7 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
   align-items:center;
 }
 .profile__shot{ grid-column:1 / span 5; }
-.profile__shot .piece__frame{ aspect-ratio:4/5; background:#1a272e; }
+.profile__shot .piece__frame{ aspect-ratio:4/3; background:#1a272e; }
 .profile__body{ grid-column:7 / span 6; }
 .profile__body .prose{ color:rgba(234,224,213,.86); margin-top:22px; }
 .profile__body .prose p{ max-width:52ch; }
