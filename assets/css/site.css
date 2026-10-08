@@ -354,7 +354,7 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
   gap:clamp(16px,2.4vw,38px);
 }
 .strip figure{ margin:0; }
-.strip .piece__frame{ aspect-ratio:1/1; }
+.strip .piece__frame{ aspect-ratio:4/3; }
 .strip figcaption{
   margin-top:12px;
   font-size:13px;
