@@ -299,7 +299,7 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
   align-items:center;
 }
 .profile__shot{ grid-column:1 / span 5; }
-.profile__shot .piece__frame{ aspect-ratio:4/3; background:#1a272e; }
+.profile__shot .piece__frame{ aspect-ratio:4/5; background:#1a272e; }
 .profile__body{ grid-column:7 / span 6; }
 .profile__body .prose{ color:rgba(234,224,213,.86); margin-top:22px; }
 .profile__body .prose p{ max-width:52ch; }
@@ -316,37 +316,6 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
   color:var(--bone);
   max-width:26ch;
 }
-
-/* ---------- the studio strip ---------- */
-
-.strip{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:clamp(16px,2.4vw,38px);
-}
-.strip figure{ margin:0; }
-.strip .piece__frame{ aspect-ratio:4/3; }
-.strip figcaption{
-  margin-top:12px;
-  font-size:13px;
-  color:var(--earth);
-  max-width:34ch;
-}
-
-/* ---------- the enquiry cut ---------- */
-
-.cut{
-  background:var(--clay);
-  color:var(--ink);
-}
-.cut__inner{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:32px;
-  flex-wrap:wrap;
-}
-.cut .label{ color:rgba(10,9,8,.62); }
 
 .btn{
   display:inline-flex;
@@ -447,7 +416,6 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
 
 @media (max-width:640px){
   .piece{ grid-column:span 12 !important; }
-  .strip{ grid-template-columns:1fr; gap:30px; }
   .nav{ gap:14px; font-size:11px; }
   .hero__aside{ display:none; }
 
@@ -698,4 +666,24 @@ button{ font:inherit; color:inherit; background:none; border:0; padding:0; curso
 @media (max-width:640px){
   .piece{ grid-column:span 12 !important; }
   .head__note{ display:none; }
+}
+
+/* ---------- the enquiry line, closing the dark band ---------- */
+
+.enquire-line{
+  margin-top:clamp(40px,6vw,76px);
+  padding-top:clamp(26px,4vw,42px);
+  border-top:1px solid rgba(198,172,143,.3);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.enquire-line p{
+  margin:0;
+  max-width:46ch;
+  font-size:15px;
+  line-height:1.55;
+  color:rgba(234,224,213,.78);
 }
